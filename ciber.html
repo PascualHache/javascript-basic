@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            //Ex1
+            console.log("Ex1")
+            console.log("Hola Mundo!");
+
+            //Ex2
+            window.alert("Hola me llamo Héctor")
+
+            //Ex3
+            console.log("\nEx3")
+            var nombre = "Héctor";
+            var apellido = "Pascual";
+            console.log(nombre+" "+apellido);
+
+            //Ex4
+            console.log("\nEx4")
+            var num1= 6,
+                num2= 9;
+            console.log("La suma entre "+num1+" i "+num2+" es "+(num1+num2))
+
+            //Ex5
+            var nota_examen= 9.9;
+            if(0.0<nota_examen && nota_examen<5.0){
+                var mensje_nota="Ohh! has suspendido "
+                } else if (nota_examen<0.0 || (nota_examen>10.0)){
+                    var mensje_nota="Estas seguro? Es imposible corregir "
+                    } 
+            else {
+                var mensje_nota="Genial! Has aprovado "
+                }
+            window.alert(mensje_nota+"el examen con un "+nota_examen)
+
+            //Ex6
+            console.log("\nEx6")
+            var cadena= "Tinc un cotxe de color blau"
+            console.log(cadena)
+            console.log(cadena.replace("blau","verd"))
+            console.log(cadena.replace(/[o]/g,"u"))
+
+            //Ex7
+            console.log("\nEx7")
+            var material = ["taula", "cadira", "ordinador", "libreta"];
+            for (var n in material){
+                console.log("L'objecte "+material[n]+" està a la posició "+n)
+            }
+
+            //Ex8
+            console.log("\nEx8")
+            function calculadora(op_name, op1, op2){
+                switch (op_name) {
+                    case "suma":
+                        console.log("El resultado de la operación suma de "+op1+" y "+op2+" es: "+(op1+op2))
+                        break;
+                    case "resta":
+                        console.log("El resultado de la operación resta de "+op1+" y "+op2+" es: "+(op1-op2))
+                        break;
+                    case "multiplica":
+                        console.log("El resultado de la operación multiplica de "+op1+" y "+op2+" es: "+(op1*op2))
+                        break;
+                    case "divide":
+                        console.log("El resultado de la operación divide de "+op1+" y "+op2+" es: "+(op1/op2))
+                        break;
+                    default:
+                        var res=0;
+                        console.log("Parece que ha habido un error, comprueba que estas usando las palabras clave: suma, resta, multiplica o divide")
+                        break;
+                }
+            }
+            var resultat = calculadora("aa",40,20);
+        </script>
+    </body>
+</html>
